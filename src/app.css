@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #222831;
+}
+
+.app-container {
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app-header {
+  padding-bottom: 20px;
+}
+
+.app-header img {
+  width: 28rem;
+}
+
+.app-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.friends-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  background-color: #1d2127;
+  border-radius: 6px;
+  min-width: 270px;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.empty-friends-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  background-color: #1d2127;
+  border-radius: 6px;
+  min-width: 270px;
+  height: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.empty-icon, .friend-icon {
+  display: flex;
+  align-self: center;
+  width: 10rem;
+}
+
+.friend-bill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: #393E46;
+  border-radius: 6px;
+  min-width: 270px;
+  height: 100%;
+  padding: 0 1.5rem;
+}
+
+.empty-friend-bill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  background-color: #1d2127;
+  border-radius: 6px;
+  min-width: 270px;
+  height: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.empty-friend-bill h2 {
+  text-align: center;
+}
+
+.friend {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+  background-color: #1d2127;
+  padding: 1rem 0.8rem;
+  border-radius: 8px;
+}
+
+.friend .friend-select-button:last-child,
+.friend .selected-button:last-child {
+  margin: auto;
+}
+
+.friend img {
+  border-radius: 6px;
+}
+
+.friend-text-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.friend-select-button {
+  background-color: #00ADB5;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.friend-add-button {
+  background-color: #00b59a;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.friend-add-button:hover {
+  background-color: #018f7a;
+}
+
+.friend-select-button:hover {
+  background-color: #02838a;
+}
+
+.empty-friends-list button {
+  background-color: #00ADB5;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.friend-bill div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.friend-bill h2 {
+  text-align: center;
+  font-size: large;
+}
+
+.friend-bill div span {
+  min-width: 100px;
+}
+
+.friend-bill div input,
+.friend-bill div select {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.split-bill-button {
+  background-color: #7602a0;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.split-bill-button:hover {
+  background-color: #9c01d4;
+  
+}
+
+.selected {
+  background-color: #393E46;
+}
+
+.selected-button {
+  background-color: #b50045;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 9rem;
+}
+
+.selected-button:hover {
+  background-color: #97023b;
+}
