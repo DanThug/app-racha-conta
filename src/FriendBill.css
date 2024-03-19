@@ -1,0 +1,92 @@
+.form-friend-bill {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+}
+
+.friend-bill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: #393E46;
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.friend-bill div {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+}
+  
+.friend-bill h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+  
+.friend-bill div span {
+  min-width: 100px;
+}
+  
+.friend-bill div input,
+.friend-bill div select {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.split-bill-button {
+  background-color: #7602a0;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+  
+.split-bill-button:hover {
+  background-color: #9c01d4;
+}
+
+@media (max-width: 650px) {
+  .form-friend-bill {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .friend-bill {
+    width: 100%;
+    height: auto;
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+
+  .friend-bill h2 {
+    font-size: 3rem;
+  }
+
+  .friend-bill div {
+    align-items: center;
+  }
+
+  .friend-bill div span {
+    font-size: 1.6rem;
+  }
+
+  .friend-bill div input,
+  .friend-bill div select {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+  }
+
+  .split-bill-button {
+    height: 5rem;
+    font-size: 2rem;
+  }
+}

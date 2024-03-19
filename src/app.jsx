@@ -9,21 +9,21 @@ const friends = [
     id: crypto.randomUUID(),
     name: "Henrique",
     urlPic: "friends/henrique.jpg",
-    bill: "7",
+    bill: -7,
     selected: false
   },
   {
     id: crypto.randomUUID(),
     name: "Renata",
     urlPic: "friends/renata.jpg",
-    bill: "20",
+    bill: 20,
     selected: false
   },
   {
     id: crypto.randomUUID(),
     name: "Antonio",
     urlPic: "friends/antonio.jpg",
-    bill: "0",
+    bill: 0,
     selected: false
   }
 ]
@@ -65,7 +65,10 @@ const App = () => {
         }
         {
           friendsList.find(({ selected }) => selected)
-          ? <FriendBill selectedFriend={selectedFriend} />
+          ? <FriendBill
+            selectedFriend={selectedFriend}
+            setfriendsList={setfriendsList}
+            />
           : (
             <div className="empty-friend-bill">
               <img className="empty-icon" src="empty.png" alt="empty icon" />

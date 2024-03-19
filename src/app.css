@@ -35,18 +35,6 @@ html {
   gap: 1rem;
 }
 
-.friends-list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.6rem;
-  background-color: #1d2127;
-  border-radius: 6px;
-  min-width: 270px;
-  height: 100%;
-  padding: 1.5rem;
-}
-
 .empty-friends-list {
   display: flex;
   justify-content: center;
@@ -65,18 +53,6 @@ html {
   width: 10rem;
 }
 
-.friend-bill {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1.2rem;
-  background-color: #393E46;
-  border-radius: 6px;
-  min-width: 270px;
-  height: 100%;
-  padding: 0 1.5rem;
-}
-
 .empty-friend-bill {
   display: flex;
   justify-content: center;
@@ -93,62 +69,6 @@ html {
   text-align: center;
 }
 
-.friend {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  gap: 1.5rem;
-  background-color: #1d2127;
-  padding: 1rem 0.8rem;
-  border-radius: 8px;
-}
-
-.friend .friend-select-button:last-child,
-.friend .selected-button:last-child {
-  margin: auto;
-}
-
-.friend img {
-  border-radius: 6px;
-}
-
-.friend-text-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.friend-select-button {
-  background-color: #00ADB5;
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 7px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.friend-add-button {
-  background-color: #00b59a;
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 7px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.friend-add-button:hover {
-  background-color: #018f7a;
-}
-
-.friend-select-button:hover {
-  background-color: #02838a;
-}
-
 .empty-friends-list button {
   background-color: #00ADB5;
   color: #fff;
@@ -160,60 +80,38 @@ html {
   transition: 0.3s;
 }
 
-.friend-bill div {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
+@media (max-width: 650px) {
+  .app-container {
+    justify-content: flex-start;
+    padding: 2rem 0;
+  }
 
-.friend-bill h2 {
-  text-align: center;
-  font-size: large;
-}
+  .app-main {
+    flex-wrap: wrap;
+    width: 80%;
+  }
 
-.friend-bill div span {
-  min-width: 100px;
-}
-
-.friend-bill div input,
-.friend-bill div select {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 6px;
-}
-
-.split-bill-button {
-  background-color: #7602a0;
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 7px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.split-bill-button:hover {
-  background-color: #9c01d4;
+  .empty-friends-list {
+    width: 100%;
+  }
   
-}
+  .empty-friends-list button {
+    height: 5rem;
+  }
 
-.selected {
-  background-color: #393E46;
-}
+  .empty-icon, .friend-icon {
+    display: flex;
+    align-self: center;
+    width: 17rem;
+  }
+  
+  .empty-friend-bill {
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+  }
 
-.selected-button {
-  background-color: #b50045;
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 7px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  width: 9rem;
-}
-
-.selected-button:hover {
-  background-color: #97023b;
+  .empty-friend-bill h2 {
+    font-size: 4rem;
+  }
 }
