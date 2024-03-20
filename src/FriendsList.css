@@ -110,7 +110,7 @@
     }
 
     .friend-text-container h3 {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
 
 
@@ -119,12 +119,12 @@
     }
 
     .friend-select-button {
-        height: 6rem;
+        height: 5rem;
         font-size: 2rem;
     }
     
     .selected-button {
-        height: 6rem;
+        height: 5rem;
         font-size: 2rem;
     }
 
@@ -132,5 +132,16 @@
         height: 6rem;
         margin-top: 15px;
         font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .friend-text-container h3 {
+        font-size: 2.3rem;
+    }
+
+    .debt, .credit, .even {
+        font-size: 1.3rem;
     }
 }

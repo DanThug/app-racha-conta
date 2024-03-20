@@ -115,3 +115,9 @@ html {
     font-size: 4rem;
   }
 }
+
+@media (max-width: 450px) {
+  .app-main {
+    width: 100%;
+  }
+}
