@@ -1,24 +1,54 @@
+import axios from 'axios'
 import './ModalAddFriend.css'
+import { useState } from 'react'
+import { SyncLoader } from 'react-spinners'
 
 const ModalAddFriend = ({ setfriendsList, modalAddFriend, setModalAddFriend }) => {
+    const [loading, setLoading] = useState(false)
+    const [msg, setMsg] = useState(null)
     const validValue = value => /([a-zA-Z])/.test(value) && value.length > 1
+    const config = {
+        headers: {
+            "Custom-Header": "value"
+        }
+    }
+
+    const handleCloseButton = () => {
+        setModalAddFriend(m => !m)
+        setMsg("")
+    }
 
     const handleSubmitFriend = e => {
         e.preventDefault()
 
-        const { newFriendName, urlPic } = e.target.elements
-        const isValidValue = validValue(newFriendName.value)
+        const { newFriendName, file } = e.target.elements
+        const isValidName = validValue(newFriendName.value)
+        const selectedImage = file.files[0]
+        
+        if (isValidName) {
+            const fd = new FormData()
 
-        if (isValidValue) {
-            const newFriend = {
-                id: crypto.randomUUID(),
-                name: newFriendName.value,
-                urlPic: urlPic.value,
-                bill: "0"
-            }
-            setfriendsList(f => [...f, newFriend])
-            setModalAddFriend(m => !m) 
+            fd.append('file', selectedImage)
+            setLoading(true)
+            axios.post("http://httpbin.org/post", fd, config)
+            .then(({ data }) => {
+                const newFriend = {
+                    id: crypto.randomUUID(),
+                    name: newFriendName.value,
+                    urlPic: selectedImage ? data.files.file : "friends/friend.jpg",
+                    bill: "0"
+                }
+                
+                setModalAddFriend(prevState => !prevState)
+                setfriendsList(prevState => [...prevState, newFriend])
+            })
+            .catch(err => setMsg("Falha ao adicionar amigo!"))
+            .finally(() => setLoading(false))
+
+            return
         }
+
+        setMsg("Preencha os campos corretamente!")
     }
 
     return (
@@ -28,17 +58,18 @@ const ModalAddFriend = ({ setfriendsList, modalAddFriend, setModalAddFriend }) =
                 <div className="modal-add-friend">
                     <div className="modal-add-friend-container">
                         <div>
-                            <span>Nome</span>
-                            <input type="text" name="newFriendName" autoFocus />
+                            <input className="input-add-name" type="text" name="newFriendName" placeholder="Preencha seu nome..." autoFocus />
                         </div>
                         <div>
-                            <span>Foto</span>
-                            <input type="text" name="urlPic" />
+                            <label htmlFor="input-add-file" className="input-add-label">Selecionar foto</label>
+                            <input className="input-add-file" type="file" name="file" id="input-add-file" />
                         </div>
                         <div className="modal-add-friend-buttons">
                             <button className="add-button" title="Adicionar amigo">Adicionar</button>
-                            <input onClick={() => setModalAddFriend(m => !m)} type="button" className="close-button" title="Fechar tela" value="X" />
+                            <input onClick={() => handleCloseButton()} type="button" className="close-button" title="Fechar tela" value="X" />
                         </div>
+                        { loading && <SyncLoader color={"white"} speedMultiplier={0.6} /> }
+                        { msg && <span className="error-msg">{ msg }</span> }
                     </div>
                 </div>
             </form>

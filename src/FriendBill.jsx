@@ -23,11 +23,11 @@ const FriendBill = ({ selectedFriend, setfriendsList }) => {
                     <h2>Rache a conta com {selectedFriend.name}</h2>
                     <div>
                         <span>Valor total</span>
-                        <input type="number" name="totalBill" id="" />
+                        <input type="number" name="totalBill" placeholder="60"/>
                     </div>
                     <div>
                         <span>Seus gastos</span>
-                        <input type="number" name="mySpend" id="" />
+                        <input type="number" name="mySpend" placeholder="25"/>
                     </div>
                     <div>
                         <span>Quem Vai pagar?</span>
