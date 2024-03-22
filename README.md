@@ -1,19 +1,8 @@
-# Bateria de Desafios 06
+# Aplicação criado em ReactJS
 
-Vou dizer uma coisa que eu nunca disse antes...
+Como usar?
 
-Se não foi especificado "como" fazer, descobrir é parte do desafio xD
-
----
-
-Entregue primeiro apenas os 20% que resolve o problema mais latente. 
-
-Faça o deploy em qualquer serviço de hospedagem gratuito que te dê uma URL pública pro cliente acessar a aplicação do dispositivo dele. 
-
-Priorize e entregue rápido. 
-
-As imagens do projeto estão na pasta imgs.
-
-O CSS, no style.css.
-
-Divirta-se!
+1 - Selecione um amigo no qual deseja dividir a conta.
+2 - Preencha o valor final da conta.
+3 - Preencha o seu gasto total.
+4 - Selecione quem irá pagar.
