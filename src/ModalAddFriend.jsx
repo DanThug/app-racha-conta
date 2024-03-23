@@ -29,6 +29,7 @@ const ModalAddFriend = ({ setfriendsList, modalAddFriend, setModalAddFriend }) =
             const fd = new FormData()
 
             fd.append('file', selectedImage)
+            setMsg("")
             setLoading(true)
             axios.post("https://httpbin.org/post", fd, config)
             .then(({ data }) => {
