@@ -120,4 +120,8 @@ html {
   .app-main {
     width: 100%;
   }
+  
+  .app-header img {
+    width: 20rem;
+  }
 }
