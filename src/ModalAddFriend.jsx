@@ -63,7 +63,7 @@ const ModalAddFriend = ({ setFriendsList, modalAddFriend, setModalAddFriend }) =
                         </div>
                         <div>
                             <label htmlFor="input-add-file" className="input-add-label">Selecionar foto</label>
-                            <input className="input-add-file" type="file" name="file" id="input-add-file" />
+                            <input className="input-add-file" type="file" name="file" id="input-add-file" accept="image/x-png,image/jpeg" />
                         </div>
                         <div className="modal-add-friend-buttons">
                             <button className="add-button" title="Adicionar amigo">Adicionar</button>
