@@ -29,12 +29,12 @@ const friends = [
 ]
 
 const App = () => {
-  const [friendsList, setfriendsList] = useState(friends)
+  const [friendsList, setFriendsList] = useState(friends)
   const [selectedFriend, setSelectedFriend] = useState({})
   const [modalAddFriend, setModalAddFriend] = useState(false)
 
   const handleSelectedFriend = id => {
-    setfriendsList(f => f.map(obj => obj.id === id ? {...obj, selected: !obj.selected} : {...obj, selected: false}))
+    setFriendsList(prevState => prevState.map(obj => obj.id === id ? {...obj, selected: !obj.selected} : {...obj, selected: false}))
     setSelectedFriend(() => friendsList.find(obj => obj.id === id))
   }
 
@@ -45,7 +45,7 @@ const App = () => {
       </header>
       <main className="app-main">
         <ModalAddFriend
-          setfriendsList={setfriendsList}
+          setFriendsList={setFriendsList}
           modalAddFriend={modalAddFriend}
           setModalAddFriend={setModalAddFriend}
         />
@@ -67,7 +67,8 @@ const App = () => {
           friendsList.find(({ selected }) => selected)
           ? <FriendBill
             selectedFriend={selectedFriend}
-            setfriendsList={setfriendsList}
+            setSelectedFriend={setSelectedFriend}
+            setFriendsList={setFriendsList}
             />
           : (
             <div className="empty-friend-bill">

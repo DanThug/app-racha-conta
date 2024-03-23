@@ -1,20 +1,26 @@
 import './FriendBill.css'
 
-const FriendBill = ({ selectedFriend, setfriendsList }) => {
+const FriendBill = ({ selectedFriend, setSelectedFriend, setFriendsList }) => {
     const handleSubmitPayment = e => {
         e.preventDefault()
 
         const { totalBill, mySpend, whoWillPay } = e.target.elements
-        console.log(totalBill.value, mySpend.value, whoWillPay.value)
-        setfriendsList(friends =>
-            friends.map(friend => selectedFriend.id === friend.id
+
+        setFriendsList(friends => {
+            const friendsArr = friends.map(friend => selectedFriend.id === friend.id
                 ? {
                 ...friend,
                 bill: whoWillPay.value === "you"
                 ? friend.bill + (+totalBill.value -  +mySpend.value)
                 : friend.bill - mySpend.value
                 } : friend
-            ))
+            )
+
+            return friendsArr.map(friend => ({
+                ...friend,
+                selected: friend.selected = false
+            }))
+        })
     }
 
     return (

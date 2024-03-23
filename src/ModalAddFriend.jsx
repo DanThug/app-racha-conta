@@ -3,7 +3,7 @@ import './ModalAddFriend.css'
 import { useState } from 'react'
 import { SyncLoader } from 'react-spinners'
 
-const ModalAddFriend = ({ setfriendsList, modalAddFriend, setModalAddFriend }) => {
+const ModalAddFriend = ({ setFriendsList, modalAddFriend, setModalAddFriend }) => {
     const [loading, setLoading] = useState(false)
     const [msg, setMsg] = useState(null)
     const validValue = value => /([a-zA-Z])/.test(value) && value.length > 1
@@ -37,11 +37,11 @@ const ModalAddFriend = ({ setfriendsList, modalAddFriend, setModalAddFriend }) =
                     id: crypto.randomUUID(),
                     name: newFriendName.value,
                     urlPic: selectedImage ? data.files.file : "friends/friend.jpg",
-                    bill: "0"
+                    bill: 0
                 }
                 
                 setModalAddFriend(prevState => !prevState)
-                setfriendsList(prevState => [...prevState, newFriend])
+                setFriendsList(prevState => [...prevState, newFriend])
             })
             .catch(err => setMsg("Falha ao adicionar amigo!"))
             .finally(() => setLoading(false))
