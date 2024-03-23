@@ -17,13 +17,14 @@
 
 .friend-bill div {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: row;
 }
   
 .friend-bill h2 {
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
   
 .friend-bill div span {
@@ -40,6 +41,7 @@
 .split-bill-button {
   background-color: #7602a0;
   color: #fff;
+  margin-top: 1rem;
   padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 7px;
