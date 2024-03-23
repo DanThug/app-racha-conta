@@ -30,7 +30,7 @@ const ModalAddFriend = ({ setfriendsList, modalAddFriend, setModalAddFriend }) =
 
             fd.append('file', selectedImage)
             setLoading(true)
-            axios.post("http://httpbin.org/post", fd, config)
+            axios.post("https://httpbin.org/post", fd, config)
             .then(({ data }) => {
                 const newFriend = {
                     id: crypto.randomUUID(),
