@@ -67,7 +67,6 @@ const App = () => {
           friendsList.find(({ selected }) => selected)
           ? <FriendBill
             selectedFriend={selectedFriend}
-            setSelectedFriend={setSelectedFriend}
             setFriendsList={setFriendsList}
             />
           : (
