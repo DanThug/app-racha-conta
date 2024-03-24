@@ -41,6 +41,7 @@
 .friend img {
     border-radius: 6px;
     max-width: 48px;
+    max-height: 48px;
 }
 
 .friend-text-container {
