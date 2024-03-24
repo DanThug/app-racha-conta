@@ -13,8 +13,8 @@ const FriendBill = ({ selectedFriend, setFriendsList }) => {
                 ? {
                 ...friend,
                 bill: whoWillPay.value === "you"
-                ? friend.bill + (+totalBill.value -  +mySpend.value)
-                : friend.bill - mySpend.value
+                ? friend.bill + (+totalBill.value - +mySpend.value)
+                : Math.abs(friend.bill) + +mySpend.value - +totalBill.value
                 } : friend
             ).map(friend => ({
                 ...friend,
