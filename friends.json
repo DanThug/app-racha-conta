@@ -1,23 +1,23 @@
 [
   {
-    id: "a72613d5",
-    name: "Henrique",
-    urlPic: "friends/henrique.jpg",
-    bill: -7,
-    selected: false
+    "id": "a72613d5",
+    "name": "Henrique",
+    "urlPic": "friends/henrique.jpg",
+    "bill": -7,
+    "selected": false
   },
   {
-    id: "673bc540",
-    name: "Renata",
-    urlPic: "friends/renata.jpg",
-    bill: 20,
-    selected: false
+    "id": "673bc540",
+    "name": "Renata",
+    "urlPic": "friends/renata.jpg",
+    "bill": 20,
+    "selected": false
   },
   {
-    id: "6e7156e0",
-    name: "Antonio",
-    urlPic: "friends/antonio.jpg",
-    bill: 0,
-    selected: false
+    "id": "6e7156e0",
+    "name": "Antonio",
+    "urlPic": "friends/antonio.jpg",
+    "bill": 0,
+    "selected": false
   }
 ]
