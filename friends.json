@@ -1,20 +1,20 @@
 [
   {
-    id: "a72613d5-11c2-4f89-9acc-db5fd048d2d1",
+    id: "a72613d5",
     name: "Henrique",
     urlPic: "friends/henrique.jpg",
     bill: -7,
     selected: false
   },
   {
-    id: "673bc540-798a-4f52-8963-650ffe2f87c1",
+    id: "673bc540",
     name: "Renata",
     urlPic: "friends/renata.jpg",
     bill: 20,
     selected: false
   },
   {
-    id: "6e7156e0-72d7-4a5e-9ee8-713002c4612c",
+    id: "6e7156e0",
     name: "Antonio",
     urlPic: "friends/antonio.jpg",
     bill: 0,
